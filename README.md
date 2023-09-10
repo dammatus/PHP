@@ -28,7 +28,16 @@ A continuación, se presenta un resumen de cómo funcionan:
 
 4. **Eliminación de Usuarios (`borrar.php`):**
 
-   - Este fragmento de código no se proporcionó en la pregunta original, pero se puede implementar de manera similar a "agregar.php" para eliminar usuarios de la base de datos.
+   - La página se encarga de mostrar una interfaz para eliminar usuarios y listar los usuarios existentes.
+   - Establece una conexión a una base de datos PostgreSQL utilizando los datos de conexión proporcionados.
+   - Permite eliminar usuarios existentes:
+      * Cuando se envía el formulario para borrar un usuario, se ejecuta una consulta SQL que elimina el usuario con el nombre de usuario (nickname) especificado.
+      * Luego, muestra un mensaje indicando si el usuario se eliminó correctamente o si hubo un error.
+   - Lista los usuarios existentes en una tabla HTML:
+      * Recupera los datos de los usuarios almacenados en la base de datos.
+      * Utiliza un bucle PHP para mostrar cada usuario en una fila de la tabla, incluyendo detalles como apellido, nombre, nick, correo electrónico, dirección, género y teléfono.
+      * Junto a cada usuario, proporciona un botón "Borrar" que permite eliminar ese usuario específico.
+   - Cierra la conexión a la base de datos después de realizar todas las operaciones necesarias.
 
 Estos códigos son parte de un sistema de gestión de usuarios que permite agregar y listar usuarios. Utilizan una base de datos PostgreSQL para almacenar y recuperar los datos de los usuarios. Además, realizan validaciones para garantizar la integridad de los datos ingresados por el usuario.
 
